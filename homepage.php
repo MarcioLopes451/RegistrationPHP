@@ -1,13 +1,10 @@
 <?php
-session_start(); // This should always be at the top
+session_start();
 
 if (!isset($_SESSION['username'])) {
-    // If the user is not logged in, redirect to the login page
     header('Location: login.php');
     exit();
 }
-
-// Welcome message for logged-in users
 echo "Welcome " . $_SESSION['username'] . "! You are logged in.";
 ?>
 <!DOCTYPE html>
